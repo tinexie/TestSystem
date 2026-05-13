@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #efe8dc;
+    color: #161616;
+    font-family: "Space Grotesk", sans-serif;
+    overflow-x: hidden;
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    padding: 60px;
+}
+
+.noise {
+    position: fixed;
+    inset: 0;
+    opacity: 0.025;
+    pointer-events: none;
+    background-image:
+    radial-gradient(#000000 0.5px, transparent 0.5px);
+    background-size: 4px 4px;
+}
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 40px;
+    border-bottom: 1px solid #8c867d;
+}
+
+.hero-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.system-text {
+    color: #355c52;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.7;
+}
+
+h1 {
+    color: #111;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.04);
+    font-size: clamp(5rem, 14vw, 12rem);
+    line-height: 0.9;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.description {
+    color: #4b443c;
+    width: 500px;
+    max-width: 100%;
+    font-size: 18px;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+.subjects {
+    padding: 120px 0;
+}
+
+.subjects-header {
+    margin-bottom: 40px;
+}
+
+.subject-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 0;
+    border-top: 1px solid #8c867d;
+    color: #111;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.subject-card:last-child {
+    border-bottom: 1px solid #8c867d;
+}
+
+.subject-card span {
+    font-family: "IBM Plex Mono", monospace;
+    opacity: 0.7;
+}
+
+.subject-card h2 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    font-weight: 500;
+}
+
+.subject-card:hover {
+    padding-left: 20px;
+    background: #d8d0c2;
+}
+
+.subject-card:nth-child(2) .system-text,
+.subject-card:nth-child(2) span {
+    color: #355c52;
+}
+
+.subject-card:nth-child(3) .system-text,
+.subject-card:nth-child(3) span {
+    color: #a6402d;
+}
+
+.subject-card:nth-child(4) .system-text,
+.subject-card:nth-child(4) span {
+    color: #3d4f73;
+}
+
+.subject-card:nth-child(5) .system-text,
+.subject-card:nth-child(5) span {
+    color: #8a6a2f;
+}
+
+@media (max-width: 768px) {
+
+    main {
+        padding: 30px;
+    }
+
+    h1 {
+        margin-bottom: 30px;
+    }
+
+    .subject-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+}
